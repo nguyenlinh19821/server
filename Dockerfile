@@ -9,7 +9,7 @@ RUN mvn clean package
 #
 # Package stage
 #
-FROM openjdk:8u342-jre
+FROM openjdk:8u342
 WORKDIR /app
 COPY --from=build /app/target/*.jar /app/app.jar
 EXPOSE 8082
